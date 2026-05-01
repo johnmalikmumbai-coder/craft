@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Premium Thumbnail Designer</title>
+    <meta name="description" content="Portfolio of a high-performance Thumbnail Designer specialized in viral YouTube designs and CTR optimization.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<canvas id="stars-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">✦</div>
+        <span>CRAFTPIX</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#process">Process</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Work With Me</a>
+</nav>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-glow"></div>
+        <h1 class="hero-title">VIRAL</h1>
+        <span class="hero-title-italic">Thumbnail Designer</span>
+        <p class="hero-desc">I design high-click-through thumbnails that stop the scroll and turn viewers into subscribers. Specializing in high-energy, storytelling, and cinematic designs.</p>
+        <div class="hero-btns">
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="#process" class="btn-ghost">The Strategy</a>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats reveal">
+        <div class="stat-card">
+            <div class="stat-num">10M+</div>
+            <div class="stat-label">Views Generated</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Thumbnails Crafted</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num">15%</div>
+            <div class="stat-label">Avg. CTR Boost</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num">50+</div>
+            <div class="stat-label">Happy Creators</div>
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="reveal">
+            <div class="section-badge">Expertise</div>
+            <h2 class="section-title">
+                The Art of the
+                <span class="section-title-italic">First Impression</span>
+            </h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon"><img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777605135/abec7d4d-a933-48e5-98e9-629b7c07c449_kma1sz.png" alt="CTR Optimization"></div>
+                <div class="skill-name">CTR Optimization</div>
+                <div class="skill-desc">Strategic placement of elements to maximize click-through rates and viewer engagement.</div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777605118/849a4488-c656-4438-b7fb-270cb9dadecd_kt9hpd.png" alt="Visual Storytelling"></div>
+                <div class="skill-name">Visual Storytelling</div>
+                <div class="skill-desc">Compressing complex video concepts into a single, high-impact visual narrative.</div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777605118/69b42675-1495-4792-94f9-3091620bf2c7_zkgai0.png" alt="Advanced Retouching"></div>
+                <div class="skill-name">Advanced Retouching</div>
+                <div class="skill-desc">High-end photo manipulation, color correction, and facial expression enhancement.</div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777605065/a88ecab2-904b-4619-be8a-363efed61697_dyx4rt.png" alt="Lighting & Depth"></div>
+                <div class="skill-name">Lighting & Depth</div>
+                <div class="skill-desc">Creating 3D-like depth with volumetric lighting and advanced compositing techniques.</div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777605065/7361583f-4735-48ef-ac4f-61829ab65397_vbzibe.png" alt="Typography Design"></div>
+                <div class="skill-name">Typography Design</div>
+                <div class="skill-desc">Crafting bold, readable, and psychological-driven text elements that demand attention.</div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777605065/9f7fc836-4b2e-42ec-83c6-cf8347dc8e45_pfld4s.png" alt="Trend Analysis"></div>
+                <div class="skill-name">Trend Analysis</div>
+                <div class="skill-desc">Staying ahead of the YouTube algorithm by analyzing and adapting to latest visual trends.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STICKY WORK SECTION -->
+    <section id="projects" class="sticky-section">
+        <div class="sticky-container">
+            <div class="sticky-left">
+                <div class="reveal">
+                    <div class="section-badge">Selected Portfolio</div>
+                    <h2 class="section-title">
+                        Designs That
+                        <span class="section-title-italic">Stop The Scroll</span>
+                    </h2>
+                    <p class="hero-desc" style="text-align: left; margin-left: 0;">We don't just design thumbnails; we build click-magnets. Every pixel is optimized for maximum viewer retention and CTR.</p>
+                </div>
+            </div>
+            <div class="sticky-right">
+                <div class="stack-card reveal">
+                    <div class="stack-card-inner">
+                        <div class="project-img">
+                            <img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777601608/DAVINCI_IS_REALLY_BEST_labj3q.jpg" alt="DaVinci Resolve Tutorial">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Tutorial</span>
+                                <span class="tag">Software</span>
+                            </div>
+                            <div class="project-name">The Ultimate Editing Secrets</div>
+                            <div class="project-desc">A professional software showcase thumbnail with dynamic lighting and high-clarity assets for educational creators.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack-card reveal">
+                    <div class="stack-card-inner">
+                        <div class="project-img">
+                            <img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777601607/BUGER_AND_FRIES_d3iulo.jpg" alt="Food Vlog Thumbnail">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Food</span>
+                                <span class="tag">Vlog</span>
+                            </div>
+                            <div class="project-name">Eating Every Burger in NYC</div>
+                            <div class="project-desc">Vibrant, high-contrast food photography thumbnail designed to trigger appetite and curiosity.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack-card reveal">
+                    <div class="stack-card-inner">
+                        <div class="project-img">
+                            <img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777601607/TOO_MUCH_SUGAR_wxeusm.jpg" alt="Health Documentary">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Health</span>
+                                <span class="tag">Documentary</span>
+                            </div>
+                            <div class="project-name">The Sugar Conspiracy</div>
+                            <div class="project-desc">Intense, storytelling-focused thumbnail for long-form video essays with a cinematic color grade.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack-card reveal">
+                    <div class="stack-card-inner">
+                        <div class="project-img">
+                            <img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777601608/CAR_CHALLENGE_jfjaet.jpg" alt="Car Challenge Thumbnail">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Challenge</span>
+                                <span class="tag">Viral</span>
+                            </div>
+                            <div class="project-name">Last To Leave The Supercar</div>
+                            <div class="project-desc">High-energy, high-stakes viral challenge thumbnail with aggressive compositing and bright colors.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack-card reveal">
+                    <div class="stack-card-inner">
+                        <div class="project-img">
+                            <img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777601607/WINE_DRICK_CHECK_hqxuvv.jpg" alt="Lifestyle Vlog">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Lifestyle</span>
+                                <span class="tag">Vlog</span>
+                            </div>
+                            <div class="project-name">The Truth About Fine Dining</div>
+                            <div class="project-desc">Minimalist, premium lifestyle thumbnail focusing on aesthetic appeal and storytelling.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack-card reveal">
+                    <div class="stack-card-inner">
+                        <div class="project-img">
+                            <img src="https://res.cloudinary.com/dfa4les6h/image/upload/v1777601609/AI_STOLEN_YOUR_JOBS_npjtqe.jpg" alt="AI Technology Thumbnail">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Technology</span>
+                            </div>
+                            <div class="project-name">Is AI Replacing You?</div>
+                            <div class="project-desc">Thought-provoking tech documentary thumbnail with futuristic lighting and clean typography.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="process-section">
+        <div class="reveal">
+            <div class="section-badge">The Strategy</div>
+            <h2 class="section-title" style="text-align: center;">
+                How We Create
+                <span class="section-title-italic">A Viral Result</span>
+            </h2>
+        </div>
+
+        <div class="process-timeline">
+            <div class="timeline-line">
+                <div class="timeline-progress"></div>
+            </div>
+            
+            <div class="timeline-logo">
+                <div class="logo-circle">✦</div>
+            </div>
+
+            <div class="process-grid-timeline">
+                <!-- Step 1 -->
+                <div class="process-item left">
+                    <div class="process-card-new">
+                        <div class="process-icon-new">🎯</div>
+                        <h3 class="process-title-new">Concept & Story</h3>
+                        <p class="process-desc-new">We start by identifying the core hook of your video to ensure the thumbnail tells a clear story that demands a click.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-item right">
+                    <div class="process-card-new">
+                        <div class="process-icon-new">🎨</div>
+                        <h3 class="process-title-new">Composition</h3>
+                        <p class="process-desc-new">Arranging elements for maximum visual flow and ensuring the focal point is unmistakable at any size.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-item left">
+                    <div class="process-card-new">
+                        <div class="process-icon-new">📸</div>
+                        <h3 class="process-title-new">Visual Polish</h3>
+                        <p class="process-desc-new">Applying high-end retouching, color grading, and lighting effects to make the subjects pop off the screen.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-item right">
+                    <div class="process-card-new">
+                        <div class="process-icon-new">📈</div>
+                        <h3 class="process-title-new">CTR Strategy</h3>
+                        <p class="process-desc-new">Final review of psychological triggers and color contrast to ensure market-leading click-through rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-destroyer">
+        <h2>STOP POSTING GARBAGE.</h2>
+        <p>Your content is fire, but your thumbnails are wet matches. Let's fix that before the algorithm forgets you exist.</p>
+        <a href="#" class="footer-cta">LET'S GO VIRAL →</a>
+    </div>
+</footer>
+
+<script type="module" src="src/main.ts"></script>
+</body>
+</html>
