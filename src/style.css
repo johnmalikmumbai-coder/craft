@@ -236,6 +236,10 @@ main {
   box-shadow: 0 8px 30px var(--accent-glow);
 }
 
+.btn-whatsapp {
+  box-shadow: 0 10px 32px var(--accent-glow);
+}
+
 .btn-ghost {
   border: 1.5px solid var(--border);
   color: var(--text-h);
@@ -298,6 +302,33 @@ main {
   text-transform: uppercase;
   color: var(--text);
   margin-top: 8px;
+}
+
+.benefits .stat-card {
+  min-width: 220px;
+  padding: 36px 28px;
+  text-align: left;
+}
+
+.benefit-title {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 10px;
+}
+
+.benefit-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .benefits .stat-card {
+    min-width: 100%;
+    text-align: center;
+  }
 }
 
 /* ---- SECTION COMMON ---- */
@@ -376,12 +407,78 @@ section {
   width: 64px;
   height: 64px;
   margin-bottom: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(212,118,42,0.28);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.08), transparent 36%),
+    radial-gradient(circle at 30% 20%, rgba(255,154,74,0.32), transparent 42%),
+    linear-gradient(145deg, #19131a 0%, #29180f 52%, #0f0f1a 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    inset 0 -12px 24px rgba(0,0,0,0.28),
+    0 12px 30px rgba(212,118,42,0.18);
+  display: grid;
+  place-items: center;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
-.skill-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.skill-icon::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 17px;
+  border: 1px solid rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.skill-card:hover .skill-icon {
+  border-color: rgba(212,118,42,0.48);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.14),
+    inset 0 -12px 24px rgba(0,0,0,0.26),
+    0 16px 38px rgba(212,118,42,0.24);
+  transform: translateY(-2px);
+}
+
+.skill-icon svg {
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 5px 8px rgba(0,0,0,0.34));
+  position: relative;
+  z-index: 1;
+}
+
+.svg-fill {
+  fill: url(#iconGold1);
+  stroke: rgba(255,230,186,0.72);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.svg-depth {
+  fill: rgba(212,118,42,0.22);
+  stroke: rgba(212,118,42,0.62);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.svg-stroke {
+  fill: none;
+  stroke: url(#iconGold1);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.svg-highlight {
+  fill: none;
+  stroke: rgba(255,240,186,0.82);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .skill-name {
@@ -454,20 +551,23 @@ section {
 .stack-card-inner {
   display: flex;
   align-items: center;
-  gap: 24px;
-  padding: 20px;
+  gap: 32px;
+  padding: 28px;
+  min-height: 240px;
 }
 
 .project-img {
-  width: 200px;
-  min-width: 200px;
-  height: 112px;
+  width: 44%;
+  max-width: 420px;
+  min-width: 300px;
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
 }
 
 .project-img img {
   width: 100%;
+  aspect-ratio: 16 / 9;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -478,7 +578,10 @@ section {
   transform: scale(1.05);
 }
 
-.project-info { flex: 1; }
+.project-info {
+  flex: 1;
+  align-self: center;
+}
 
 .project-tags {
   display: flex;
@@ -514,9 +617,27 @@ section {
   color: var(--text);
 }
 
+@media (max-width: 900px) {
+  .stack-card-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+    padding: 24px;
+    min-height: unset;
+  }
+  .project-img {
+    width: 100%;
+    max-width: none;
+    min-width: unset;
+  }
+  .project-info { width: 100%; }
+}
+
 @media (max-width: 580px) {
-  .stack-card-inner { flex-direction: column; }
-  .project-img { width: 100%; min-width: unset; height: 180px; }
+  .stack-card-inner {
+    gap: 20px;
+    padding: 20px;
+  }
 }
 
 /* ---- PROCESS SECTION ---- */
