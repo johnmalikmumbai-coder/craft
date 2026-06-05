@@ -740,16 +740,89 @@ section {
 }
 
 .process-card-new {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.045) 38%, rgba(212,118,42,0.08)),
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,0.14), transparent 34%),
+    radial-gradient(circle at 88% 105%, rgba(212,118,42,0.16), transparent 42%),
+    rgba(10,10,18,0.56);
+  border: 1px solid rgba(255,166,83,0.22);
+  border-radius: 24px;
   padding: 28px 24px;
-  transition: border-color 0.3s, transform 0.3s;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.22),
+    inset 0 0 28px rgba(255,255,255,0.035),
+    inset 0 -28px 42px rgba(0,0,0,0.22),
+    0 18px 46px rgba(0,0,0,0.38),
+    0 0 24px rgba(212,118,42,0.06);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.process-card-new::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 23px;
+  background:
+    linear-gradient(155deg, rgba(255,255,255,0.18), transparent 24%),
+    linear-gradient(110deg, transparent 36%, rgba(255,255,255,0.08) 49%, transparent 62%),
+    radial-gradient(circle at 86% 92%, rgba(212,118,42,0.14), transparent 30%);
+  opacity: 0.84;
+  pointer-events: none;
+}
+
+.process-card-new::after {
+  content: '';
+  position: absolute;
+  right: -36px;
+  bottom: -44px;
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(212,118,42,0.16), rgba(212,118,42,0.06) 38%, transparent 68%);
+  filter: blur(8px);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.process-card-new > * {
+  position: relative;
+  z-index: 1;
 }
 
 .process-card-new:hover {
-  border-color: rgba(212,118,42,0.4);
+  border-color: rgba(255,183,112,0.34);
   transform: translateY(-4px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.26),
+    inset 0 0 30px rgba(255,255,255,0.045),
+    inset 0 -28px 42px rgba(0,0,0,0.2),
+    0 24px 58px rgba(0,0,0,0.44),
+    0 0 34px rgba(212,118,42,0.14);
+}
+
+@media (max-width: 768px) {
+  .process-card-new:hover {
+    border-color: rgba(255,166,83,0.22);
+    transform: none;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.22),
+      inset 0 0 28px rgba(255,255,255,0.035),
+      inset 0 -28px 42px rgba(0,0,0,0.22),
+      0 18px 46px rgba(0,0,0,0.38),
+      0 0 24px rgba(212,118,42,0.06);
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .process-card-new {
+    background:
+      linear-gradient(145deg, rgba(255,255,255,0.08), rgba(212,118,42,0.055)),
+      rgba(13,13,24,0.86);
+  }
 }
 
 .process-icon-new {
