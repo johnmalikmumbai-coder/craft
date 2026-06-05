@@ -906,3 +906,57 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* FINAL MOBILE NO HORIZONTAL MOVEMENT OVERRIDE */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+  }
+
+  main,
+  section,
+  footer,
+  nav,
+  #stars-canvas,
+  .hero,
+  .stats,
+  .benefits,
+  #skills,
+  .sticky-section,
+  .sticky-container,
+  .sticky-left,
+  .sticky-left .reveal,
+  .sticky-right,
+  .stack-card,
+  .stack-card-inner,
+  .project-info,
+  .process-section,
+  .process-section > .reveal,
+  .process-timeline,
+  .process-card-new,
+  .footer-destroyer {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .sticky-container,
+  .stack-card,
+  .process-card-new,
+  .skill-card,
+  .stat-card {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .project-img,
+  .project-img img {
+    max-width: 100% !important;
+  }
+}
